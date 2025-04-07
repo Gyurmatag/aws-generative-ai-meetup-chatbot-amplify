@@ -17,7 +17,7 @@ export default function Chat() {
         <CardHeader>
           <CardTitle>Chat with Llama 4</CardTitle>
           <CardDescription>
-            Powered by Groq and Vercel AI SDK
+            Powered by Amazon Bedrock and Vercel AI SDK
           </CardDescription>
         </CardHeader>
         
