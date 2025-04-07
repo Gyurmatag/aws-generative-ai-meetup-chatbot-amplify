@@ -1,12 +1,13 @@
 import { Message } from 'ai';
 import { streamText } from 'ai';
-import { groq } from '@ai-sdk/groq';
+import { bedrock } from '@ai-sdk/amazon-bedrock';
+
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
 
   const result = streamText({
-    model: groq('meta-llama/llama-4-scout-17b-16e-instruct'),
+    model: bedrock('meta.llama3-2-3b-instruct-v1:0'),
     messages: messages as Message[],
   });
 
