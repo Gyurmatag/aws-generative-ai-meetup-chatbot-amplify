@@ -6,9 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { AlertCircle } from 'lucide-react';
 
 export default function Chat() {
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat();
+  const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat();
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-slate-100 p-4">
@@ -22,6 +23,12 @@ export default function Chat() {
         
         <CardContent className="flex-1 overflow-hidden">
           <ScrollArea className="h-full pr-4">
+            {error && (
+              <div className="flex items-center gap-2 p-4 mb-4 text-red-600 bg-red-50 rounded-lg">
+                <AlertCircle className="h-5 w-5" />
+                <p className="text-sm">Error: {error.message || 'Something went wrong. Please try again.'}</p>
+              </div>
+            )}
             {messages.map((message, i) => (
               <div
                 key={i}
