@@ -1,6 +1,12 @@
 import { Message } from 'ai';
 import { streamText } from 'ai';
-import { bedrock } from '@ai-sdk/amazon-bedrock';
+import { createAmazonBedrock } from '@ai-sdk/amazon-bedrock';
+
+const bedrock = createAmazonBedrock({
+  region: 'eu-central-1',
+  accessKeyId: process.env.APP_ACCESS_KEY_ID!,
+  secretAccessKey: process.env.APP_SECRET_ACCESS_KEY!,
+});
 
 export async function POST(req: Request) {
   try {
