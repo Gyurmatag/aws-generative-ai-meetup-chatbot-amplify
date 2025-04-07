@@ -26,7 +26,7 @@ export default function Chat() {
             {error && (
               <div className="flex items-center gap-2 p-4 mb-4 text-red-600 bg-red-50 rounded-lg">
                 <AlertCircle className="h-5 w-5" />
-                <p className="text-sm">Error: {error.message || 'Something went wrong. Please try again.'}</p>
+                <p className="text-sm">Error: {JSON.stringify(error.message) || 'Something went wrong. Please try again.'}</p>
               </div>
             )}
             {messages.map((message, i) => (

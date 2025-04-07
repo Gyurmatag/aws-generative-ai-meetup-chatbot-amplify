@@ -1,5 +1,5 @@
 import { Message } from 'ai';
-import { streamText } from 'ai';
+import { streamText, generateText } from 'ai';
 import { createAmazonBedrock } from '@ai-sdk/amazon-bedrock';
 
 const bedrock = createAmazonBedrock({
@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     }
 
     const result = streamText({
-      model: bedrock('meta.llama3-2-3b-instruct-v1:0'),
+      model: bedrock('anthropic.claude-3-5-sonnet-20240620-v1:0'),
       messages: messages as Message[],
     });
 
