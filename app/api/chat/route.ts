@@ -1,5 +1,5 @@
 import { Message } from 'ai';
-import { streamText, generateText } from 'ai';
+import { streamText } from 'ai';
 import { createAmazonBedrock } from '@ai-sdk/amazon-bedrock';
 
 const bedrock = createAmazonBedrock({

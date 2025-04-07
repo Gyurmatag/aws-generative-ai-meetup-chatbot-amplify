@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AWS Generative AI Meetup Chatbot
+
+A modern chatbot application built with Next.js that demonstrates the integration of various AI models including Amazon Bedrock and Groq. This project was created for the AWS Generative AI Meetup to showcase how to build and deploy AI-powered chat applications.
+
+## Features
+
+- 🤖 Multi-model chat interface supporting:
+  - Amazon Bedrock integration
+  - Groq API integration
+- 💨 Built with Next.js 15 and TypeScript for optimal performance
+- 🎨 Modern UI with Tailwind CSS and Radix UI components
+- ⚡ Real-time streaming responses
+- 📱 Responsive design for all devices
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (LTS version recommended)
+- npm or yarn
+- AWS account with Bedrock access (for Amazon Bedrock features)
+- Groq API key (for Groq integration)
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/aws-generative-ai-meetup-chatbot-amplify.git
+cd aws-generative-ai-meetup-chatbot-amplify
+```
 
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Set up your environment variables:
+Create a `.env` file in the root directory and add your API keys:
+```env
+GROQ_API_KEY=your_groq_api_key
+AWS_ACCESS_KEY_ID=your_aws_access_key
+AWS_SECRET_ACCESS_KEY=your_aws_secret_key
+AWS_REGION=your_aws_region
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/                # Next.js app directory
+│   ├── api/           # API routes
+│   ├── components/    # React components
+│   └── lib/          # Utility functions and configurations
+├── public/           # Static assets
+└── components/       # Shared components
+```
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js 15](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Radix UI](https://www.radix-ui.com/) - UI components
+- [Amazon Bedrock](https://aws.amazon.com/bedrock/) - AI model integration
+- [Groq](https://groq.com/) - AI model integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is open source and available under the MIT license.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgments
+
+- AWS Generative AI Community
+- Next.js team for the excellent framework
+- All contributors and participants of the AWS Generative AI Meetup
